@@ -6,7 +6,7 @@ import scss from "rollup-plugin-scss";
 import pkg from "./package.json";
 
 export default {
-  input: "src/index.tsx",
+  input: "src/index.ts",
   output: [
     {
       file: pkg.main,
@@ -21,7 +21,7 @@ export default {
       sourcemap: true,
     },
   ],
-  external: ["mathquill", "jquery", "mathquill/build/mathquill.css"], // dependencies
+  external: [], // dependencies
   plugins: [
     external(),
     scss(),
