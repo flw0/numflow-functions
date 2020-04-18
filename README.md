@@ -9,6 +9,9 @@ welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?styl
 **By [Douwe den Blanken](https://nl.linkedin.com/in/douwedenblanken)
 ([v0xnihili](https://github.com/V0XNIHILI/))**
 
+Equations that have as much variables are variable entries in it, are not included in this list, as
+you can just type them yourself.
+
 ## Demo
 
 To do!
