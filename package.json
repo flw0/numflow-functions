@@ -47,7 +47,7 @@
     "webpack": "4.42.0",
     "webpack-dev-server": "3.10.3"
   },
-  "homepage": "https://github.com/flw0/numflow-functions/docs/",
+  "homepage": "https://github.com/flw0/numflow-functions/",
   "devDependencies": {
     "@babel/core": "^7.9.0",
     "@babel/preset-env": "^7.9.5",
