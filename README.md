@@ -9,20 +9,17 @@ welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?styl
 **By [Douwe den Blanken](https://nl.linkedin.com/in/douwedenblanken)
 ([v0xnihili](https://github.com/V0XNIHILI/))**
 
-Equations that have as much variables are variable entries in it, are not included in this list, as
-you can just type them yourself.
+## Welcome
 
-## Demo
+This package contains a set of various mathematical functions in the field of aerodynamics,
+statistics, aerospace engineering, chemistry, and physics. Furthermore, a set of unit converters is present. 
 
-To do!
+Please note that equations that have as much variables as variable entries in it, are not included
+in this list, as you can just type them yourself.
 
-## Usage
+## Documentation
 
-To do!
-
-```ts
-// todo
-```
+The documentation of this package can be found [here](https://flw0.github.io/numflow-functions/).
 
 <!-- ## Size
 
