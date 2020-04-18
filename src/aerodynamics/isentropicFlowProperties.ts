@@ -1,7 +1,7 @@
 /**
- *
+ * Compute the isentropic flow properties for a given Mach number and ratio of specific heats.
  * @param mach Mach number for which you want to obtain the isentropic flow properties
- * @param y
+ * @param y Ratio of specific heats of the gas used
  */
 function isentropicFlowProperties(mach: number, y = 1.4) {
   const p0OverP = (1 + ((y - 1) / 2) * mach ** 2) ** (y / (y - 1));

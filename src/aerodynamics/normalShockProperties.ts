@@ -1,5 +1,5 @@
 /**
- *
+ * Calculate the normal shock properties for a given Mach number and ratio of specific heats.
  * @param mach Mach number for which you want to obtain the normal shock properties
  * @param y Ratio of specific heats of the gas used
  */

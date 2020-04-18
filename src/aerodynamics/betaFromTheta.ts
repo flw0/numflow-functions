@@ -1,11 +1,19 @@
+type WeakOrStrongShock = 0 | 1;
+
 /**
- * Source: https://nl.mathworks.com/matlabcentral/fileexchange/32777-theta-beta-mach-analytic-relation
+ * Calculate the oblique shock wave angle (β) for a given deflectoin angle (θ) and Mach number.
+ * The source for this analytic solution can be found here: https://nl.mathworks.com/matlabcentral/fileexchange/32777-theta-beta-mach-analytic-relation
  * @param mach Mach number for which you want to obtain the value of beta
- * @param theta
- * @param n
+ * @param theta Deflection angle
+ * @param n Return weak (0) or strong (1) shock data
  * @param y Ratio of specific heats of the gas used
  */
-function betaFromTheta(mach: number, theta: number, n = 0, y = 1.4) {
+function betaFromTheta(
+  mach: number,
+  theta: number,
+  n: WeakOrStrongShock = 0,
+  y = 1.4
+) {
   const mu = Math.asin(1 / mach); // Mach wave angle
 
   const c = Math.tan(mu) ** 2;
