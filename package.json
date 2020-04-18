@@ -6,7 +6,14 @@
   "module": "lib/index.es.js",
   "jsnext:main": "lib/index.es.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
+    "watch": "jest --watch",
+    "coverage": "jest --coverage",
+    "docs": "./node_modules/.bin/typedoc --out docs src/**/*.ts",
+    "copy": "cp -av docs site",
+    "html": "html-minifier --input-dir ./docs --output-dir ./site --collapse-whitespace --remove-comments --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --remove-tag-whitespace --use-short-doctype --minify-css true --minify-js --file-ext html",
+    "css": "mkdir -p site/assets/css && cleancss ./docs/assets/css/main.css --output ./site/assets/css/main.css",
+    "minify": "yarn copy && yarn html && yarn css",
     "pkg": "rollup -c"
   },
   "repository": {
@@ -18,12 +25,16 @@
     "mathematics",
     "math",
     "functions",
-    "isentropic"
+    "isentropic",
+    "aerospace",
+    "statistics",
+    "aerodynamics",
+    "chemistry"
   ],
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/flw0/equation-editor-react/issues"
+    "url": "https://github.com/flw0/numflow-functions/issues"
   },
   "files": [
     "lib/*",
@@ -36,15 +47,33 @@
     "webpack": "4.42.0",
     "webpack-dev-server": "3.10.3"
   },
-  "homepage": "https://github.com/flw0/numflow-functions/",
+  "homepage": "https://github.com/flw0/numflow-functions/docs/",
   "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.5",
+    "babel-core": "^6.26.3",
+    "babel-jest": "^25.3.0",
+    "clean-css": "^4.2.3",
+    "clean-css-cli": "^4.3.0",
+    "docdash": "^1.2.0",
+    "html-minifier": "^4.0.0",
+    "jest": "^25.3.0",
     "rollup": "^2.3.4",
+    "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-filesize": "^7.0.0",
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-peer-deps-external": "^2.2.2",
     "rollup-plugin-scss": "^2.1.0",
     "rollup-plugin-typescript2": "^0.27.0",
+    "ts-jest": "^25.3.1",
+    "typedoc": "^0.17.4",
     "typescript": "^3.8.3"
   },
-  "peerDependencies": {}
+  "peerDependencies": {},
+  "dependencies": {
+    "@types/jest": "^25.2.1",
+    "@types/mathjs": "^6.0.5",
+    "mathjs": "^6.6.2"
+  }
 }
