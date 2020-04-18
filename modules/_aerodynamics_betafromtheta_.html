@@ -70,6 +70,12 @@
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
+						<section class="tsd-index-section tsd-is-not-exported">
+							<h3>Type aliases</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported"><a href="_aerodynamics_betafromtheta_.html#weakorstrongshock" class="tsd-kind-icon">Weak<wbr>OrStrong<wbr>Shock</a></li>
+							</ul>
+						</section>
 						<section class="tsd-index-section ">
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
@@ -79,24 +85,38 @@
 					</div>
 				</section>
 			</section>
+			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
+				<h2>Type aliases</h2>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
+					<a name="weakorstrongshock" class="tsd-anchor"></a>
+					<h3>Weak<wbr>OrStrong<wbr>Shock</h3>
+					<div class="tsd-signature tsd-kind-icon">Weak<wbr>OrStrong<wbr>Shock<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">0</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">1</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/flw0/numflow-functions/blob/0f248eb/src/aerodynamics/betaFromTheta.ts#L1">aerodynamics/betaFromTheta.ts:1</a></li>
+						</ul>
+					</aside>
+				</section>
+			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Functions</h2>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
 					<a name="betafromtheta" class="tsd-anchor"></a>
 					<h3>beta<wbr>From<wbr>Theta</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
-						<li class="tsd-signature tsd-kind-icon">beta<wbr>From<wbr>Theta<span class="tsd-signature-symbol">(</span>mach<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, theta<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, n<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, y<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+						<li class="tsd-signature tsd-kind-icon">beta<wbr>From<wbr>Theta<span class="tsd-signature-symbol">(</span>mach<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, theta<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, n<span class="tsd-signature-symbol">?: </span><a href="_aerodynamics_betafromtheta_.html#weakorstrongshock" class="tsd-signature-type">WeakOrStrongShock</a>, y<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/flw0/numflow-functions/blob/ae405ce/src/aerodynamics/betaFromTheta.ts#L8">aerodynamics/betaFromTheta.ts:8</a></li>
+									<li>Defined in <a href="https://github.com/flw0/numflow-functions/blob/0f248eb/src/aerodynamics/betaFromTheta.ts#L11">aerodynamics/betaFromTheta.ts:11</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Source: <a href="https://nl.mathworks.com/matlabcentral/fileexchange/32777-theta-beta-mach-analytic-relation">https://nl.mathworks.com/matlabcentral/fileexchange/32777-theta-beta-mach-analytic-relation</a></p>
+									<p>Calculate the oblique shock wave angle (β) for a given deflectoin angle (θ) and Mach number.
+									The source for this analytic solution can be found here: <a href="https://nl.mathworks.com/matlabcentral/fileexchange/32777-theta-beta-mach-analytic-relation">https://nl.mathworks.com/matlabcentral/fileexchange/32777-theta-beta-mach-analytic-relation</a></p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -109,9 +129,15 @@
 								</li>
 								<li>
 									<h5>theta: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Deflection angle</p>
+									</div>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> n: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 0</span></h5>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> n: <a href="_aerodynamics_betafromtheta_.html#weakorstrongshock" class="tsd-signature-type">WeakOrStrongShock</a><span class="tsd-signature-symbol"> = 0</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Return weak (0) or strong (1) shock data</p>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> y: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 1.4</span></h5>
@@ -139,6 +165,9 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
+						<a href="_aerodynamics_betafromtheta_.html#weakorstrongshock" class="tsd-kind-icon">Weak<wbr>OrStrong<wbr>Shock</a>
+					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module">
 						<a href="_aerodynamics_betafromtheta_.html#betafromtheta" class="tsd-kind-icon">beta<wbr>From<wbr>Theta</a>
 					</li>
