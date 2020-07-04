@@ -1,7 +1,7 @@
 /**
  * Compute the value of the Mach number based on a given Prandtl-Meyer angle. The accurarcy of this
  * Hall approximation is quite good with the maximum error being much less than one-tenth of one percent.
- * The source for this approximation can be found here: http://www.pdas.com/pm.pdf
+ * The source for this approximation can be found [here](http://www.pdas.com/pm.pdf).
  * @param nu Value of nu for which you would like to calculate the Mach number
  */
 function machFromNu(nu: number) {
