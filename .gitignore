@@ -28,3 +28,6 @@ keys
 
 # temporay
 **/temp/**
+
+# eslint
+.eslintcache
