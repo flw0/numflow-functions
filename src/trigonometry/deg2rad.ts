@@ -1,6 +1,6 @@
-import pi from "./pi";
+import pi from './pi';
 
-function deg2rad(a: number) {
+function deg2rad(a: number): number {
   return a * (pi / 180);
 }
 
