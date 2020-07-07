@@ -1,10 +1,6 @@
 # Numflow Functions
 
-[![Version of package](https://badgen.net/npm/v/numflow-functions)](https://www.npmjs.com/package/numflow-functions)
-
-<!-- [![contributions
-welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/flw0/numflow-functions/issues)
-[![Node version](https://img.shields.io/node/v/[numflow-functions].svg?style=flat)](http://nodejs.org/download/) -->
+![CI](https://github.com/flw0/numflow-functions/workflows/CI/badge.svg)
 
 **By [Douwe den Blanken](https://nl.linkedin.com/in/douwedenblanken)
 ([v0xnihili](https://github.com/V0XNIHILI/))**
