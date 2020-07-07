@@ -1,9 +1,9 @@
-import Matrix from '../Matrix';
+import { matrix } from '../Matrix';
 import rand from '../rand';
 
 test('Check if Matrix can be constructed from a string with newlines', () => {
-  const a = new Matrix(`1 2
-                        3 4`);
+  const a = matrix(`1 2
+                    3 4`);
 
   expect(a.width).toBe(2);
   expect(a.height).toBe(2);
@@ -11,7 +11,7 @@ test('Check if Matrix can be constructed from a string with newlines', () => {
 });
 
 test('Check if Matrix can be constructed from a string with ;', () => {
-  const a = new Matrix(`1 2 ; 3 4 ; 5 6`);
+  const a = matrix(`1 2 ; 3 4 ; 5 6`);
 
   expect(a.width).toBe(2);
   expect(a.height).toBe(3);
@@ -19,9 +19,9 @@ test('Check if Matrix can be constructed from a string with ;', () => {
 });
 
 test('Check if Matrix can be constructed from a string with ; and newlines', () => {
-  const a = new Matrix(`1 2;
-                        3 4;
-                        5 6`);
+  const a = matrix(`1 2;
+                    3 4;
+                    5 6`);
 
   expect(a.width).toBe(2);
   expect(a.height).toBe(3);
@@ -29,7 +29,7 @@ test('Check if Matrix can be constructed from a string with ; and newlines', () 
 });
 
 test('Check if Matrix can be constructed from a string with newlines, ; and whitespace', () => {
-  const a = new Matrix(`             1       2                ;                    
+  const a = matrix(`             1       2                ;                    
                                      3             4            ;                    
                           5                 6                  ;`);
 
@@ -43,7 +43,7 @@ test('Check if Matrix can be constructed from 1D array', () => {
   const height = 2;
   const values = [1, 2, 3, 4];
 
-  const a = new Matrix(values, width, height);
+  const a = matrix(values, width, height);
 
   expect(a.width).toBe(2);
   expect(a.height).toBe(2);
@@ -51,8 +51,8 @@ test('Check if Matrix can be constructed from 1D array', () => {
 });
 
 test('Check matrix addition functionality', () => {
-  const a = new Matrix(`1 2; 3 4`);
-  const b = new Matrix(`1 2; 3 4`);
+  const a = matrix(`1 2; 3 4`);
+  const b = matrix(`1 2; 3 4`);
 
   const c = a['+'](b);
 
@@ -62,8 +62,8 @@ test('Check matrix addition functionality', () => {
 });
 
 test('Check matrix multiplication functionality', () => {
-  const a = new Matrix(`3 4 2`);
-  const b = new Matrix(`13 9 7 15; 8 7 4 6; 6 4 0 3`);
+  const a = matrix(`3 4 2`);
+  const b = matrix(`13 9 7 15; 8 7 4 6; 6 4 0 3`);
 
   const c = a['*'](b);
 
@@ -73,8 +73,8 @@ test('Check matrix multiplication functionality', () => {
 });
 
 test('Check if multiplication error is thrown when dimensions do not match', () => {
-  const a = new Matrix(`3 4`);
-  const b = new Matrix(`13 9 7 15; 8 7 4 6; 6 4 0 3`);
+  const a = matrix(`3 4`);
+  const b = matrix(`13 9 7 15; 8 7 4 6; 6 4 0 3`);
 
   expect(() => {
     a['*'](b);
@@ -82,8 +82,8 @@ test('Check if multiplication error is thrown when dimensions do not match', () 
 });
 
 test('Check matrix subtraction functionality', () => {
-  const a = new Matrix(`1 2; 3 4`);
-  const b = new Matrix(`-1 -2; -3 -4`);
+  const a = matrix(`1 2; 3 4`);
+  const b = matrix(`-1 -2; -3 -4`);
 
   const c = a['-'](b);
 
@@ -98,7 +98,7 @@ test('Check if Matrix can be constructed from 2D array', () => {
     [3, 4]
   ];
 
-  const a = new Matrix(values);
+  const a = matrix(values);
 
   expect(a.width).toBe(2);
   expect(a.height).toBe(2);
@@ -106,14 +106,14 @@ test('Check if Matrix can be constructed from 2D array', () => {
 });
 
 test('Check if dot product returns the correct value', () => {
-  const matrix = new Matrix(`1 2; 3 4`);
+  const a = matrix(`1 2; 3 4`);
 
-  expect(matrix.dot(matrix)).toBe(30);
+  expect(a.dot(a)).toBe(30);
 });
 
 test('Check if dot product throws error when matrix dimensions do not match', () => {
-  const a = new Matrix(`1 2; 3 4`);
-  const b = new Matrix(`1 2`);
+  const a = matrix(`1 2; 3 4`);
+  const b = matrix(`1 2`);
 
   expect(() => {
     a.dot(b);
