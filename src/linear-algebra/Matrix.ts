@@ -24,10 +24,9 @@ class Matrix {
         this.height = result.height;
         this.values = result.values;
       }
-      // If the value passed is 1D array
 
-      // Check if width and height are specified
-      if (width !== undefined && height !== undefined) {
+      // If the value passed is 1D array, then check if width and height are specified
+      else if (width !== undefined && height !== undefined) {
         // Check if the amount of values in the 1D values array has the same amount of element as
         // the specified height multiplied by the specified width
         if (values.length === width * height) {
