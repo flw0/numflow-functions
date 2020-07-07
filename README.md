@@ -24,9 +24,11 @@ The documentation of this package can be found [here](https://flw0.github.io/num
 ## Todo
 
 - Check what if the fastest way for defining and filling empty arrays
-- Fix sin cos tan etc.
+- Add correct typings for operations
+- Add correct typings for (size) or (width, height)
 - Fix multiple input types (incl. not repetition)
 - Add simple matrix solver
+- Add complex numbers
 
 <!-- ## Size
 

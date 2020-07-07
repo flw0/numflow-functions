@@ -9429,6 +9429,11 @@ ts-jest@^25.3.1:
     semver "6.x"
     yargs-parser "18.x"
 
+tsc-files@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/tsc-files/-/tsc-files-1.1.0.tgz#43c92331d829fb597a4e2cbcc34fc72f3cc77bb0"
+  integrity sha512-K1RqUoP5zBAMoU5dCwC+NF9WQeQtt+czV/UKsYtzbIJSFHnd6aD5Ht7ZF8TT0m/z/jBuw41nh+5mls6JE1AVdQ==
+
 tsconfig-paths@^3.9.0:
   version "3.9.0"
   resolved "https://registry.yarnpkg.com/tsconfig-paths/-/tsconfig-paths-3.9.0.tgz#098547a6c4448807e8fcb8eae081064ee9a3c90b"

@@ -78,6 +78,7 @@
     "rollup-plugin-scss": "^2.1.0",
     "rollup-plugin-typescript2": "^0.27.0",
     "ts-jest": "^25.3.1",
+    "tsc-files": "^1.1.0",
     "typedoc": "^0.17.4",
     "typescript": "^3.8.3"
   },
