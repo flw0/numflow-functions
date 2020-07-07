@@ -1,4 +1,4 @@
-import Matrix from './Matrix';
+import Matrix, { matrix } from './Matrix';
 
 function transpose(a: Matrix): Matrix {
   const values = a.getValues();
@@ -11,7 +11,7 @@ function transpose(a: Matrix): Matrix {
     }
   }
 
-  return new Matrix(transposedValues, a.height, a.width);
+  return matrix(transposedValues, a.height, a.width);
 }
 
 export default transpose;

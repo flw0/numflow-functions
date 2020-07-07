@@ -1,10 +1,10 @@
-import Matrix from '../Matrix';
+import { matrix } from '../Matrix';
 import transpose from '../transpose';
 
 test('Check if tranposing a matrix works correctly', () => {
-  const a = new Matrix(`1 2
-                        3 4
-                        5 6`);
+  const a = matrix(`1 2
+                    3 4
+                    5 6`);
 
   const b = transpose(a);
 

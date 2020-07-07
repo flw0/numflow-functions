@@ -1,4 +1,4 @@
-import Matrix from './Matrix';
+import Matrix, { matrix } from './Matrix';
 
 type AllowedOperations = 'sqrt' | 'abs' | 'exp' | 'sin' | 'cos' | 'tan';
 
@@ -11,7 +11,7 @@ function operation(a: number | Matrix, op: AllowedOperations): Matrix | number {
 
   const newMatrixValues = matrixValues.map((value) => Math[op](value));
 
-  return new Matrix(newMatrixValues, a.width, a.height);
+  return matrix(newMatrixValues, a.width, a.height);
 }
 
 export default operation;
