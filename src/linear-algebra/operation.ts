@@ -1,18 +1,17 @@
-import Matrix from "../linear-algebra/Matrix";
+import Matrix from './Matrix';
 
-function operation(
-  a: Matrix | number,
-  operation: "sqrt" | "abs" | "exp" | "sin" | "cos" | "tan"
-) {
-  if (typeof a === "number") {
-    return Math[operation](a);
-  } else {
-    const matrixValues = a.getValues();
+type AllowedOperations = 'sqrt' | 'abs' | 'exp' | 'sin' | 'cos' | 'tan';
 
-    const newMatrixValues = matrixValues.map((value) => Math[operation](value));
-
-    return new Matrix(newMatrixValues, a.width, a.height);
+function operation(a: number | Matrix, op: AllowedOperations): Matrix | number {
+  if (typeof a === 'number') {
+    return Math[op](a);
   }
+
+  const matrixValues = a.getValues();
+
+  const newMatrixValues = matrixValues.map((value) => Math[op](value));
+
+  return new Matrix(newMatrixValues, a.width, a.height);
 }
 
 export default operation;

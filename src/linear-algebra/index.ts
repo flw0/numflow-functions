@@ -1,21 +1,12 @@
-import Matrix, { matrix } from "./Matrix";
-import Vector from "./Vector";
-import Eye from "./Eye";
-import Diag from "./Diag";
-import Ones from "./Ones";
-import Zeros from "./Zeros";
-import Rand, { rand } from "./Rand";
-import transpose from "./transpose";
+import { matrix } from './Matrix';
+import vector from './vector';
+import eye from './eye';
+import diag from './diag';
+import ones from './ones';
+import zeros from './zeros';
+import rand from './rand';
+import transpose from './transpose';
+import stack from './stack';
+import concat from './concat';
 
-export {
-  Matrix,
-  matrix,
-  Vector,
-  Eye,
-  Diag,
-  Ones,
-  Zeros,
-  Rand,
-  rand,
-  transpose,
-};
+export { matrix, vector, eye, diag, ones, zeros, rand, transpose, stack, concat };

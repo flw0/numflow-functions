@@ -1,8 +1,4 @@
-import Matrix from "./Matrix";
-
-function diag(values: number[]) {
-  return new Diag(values);
-}
+import Matrix from './Matrix';
 
 class Diag extends Matrix {
   /**
@@ -12,10 +8,10 @@ class Diag extends Matrix {
   constructor(values: number[]) {
     const result = new Array(values.length ** 2);
 
-    for (let i = 0; i < values.length; i++) {
-      for (let j = 0; j < values.length; j++) {
+    for (let i = 0; i < values.length; i += 1) {
+      for (let j = 0; j < values.length; j += 1) {
         const currentIndex = i * values.length + j;
-        if (j == i) {
+        if (j === i) {
           result[currentIndex] = values[i];
         } else result[currentIndex] = 0;
       }
@@ -25,6 +21,8 @@ class Diag extends Matrix {
   }
 }
 
-export { diag };
+function diag(values: number[]): Diag {
+  return new Diag(values);
+}
 
-export default Diag;
+export default diag;

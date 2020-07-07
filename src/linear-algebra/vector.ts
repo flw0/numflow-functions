@@ -1,8 +1,4 @@
-import Matrix from "./Matrix";
-
-function vector(values: number[]) {
-  return new Vector(values);
-}
+import Matrix from './Matrix';
 
 class Vector extends Matrix {
   constructor(values: number[]) {
@@ -25,18 +21,20 @@ class Vector extends Matrix {
   public toString() {
     const parts: string[] = new Array(this.height + 2);
 
-    parts[0] = "╭     ╮";
+    parts[0] = '╭     ╮';
 
-    for (let i = 0; i < this.height; i++) {
-      parts[i + 1] = "│  " + this.values[i] + "  │";
+    for (let i = 0; i < this.height; i += 1) {
+      parts[i + 1] = `│  ${this.values[i]}  │`;
     }
 
-    parts[parts.length - 1] = "╰     ╯";
+    parts[parts.length - 1] = '╰     ╯';
 
-    return parts.join("\n");
+    return parts.join('\n');
   }
 }
 
-export { vector };
+function vector(values: number[]): Vector {
+  return new Vector(values);
+}
 
-export default Vector;
+export default vector;

@@ -1,8 +1,4 @@
-import Matrix from "./Matrix";
-
-function eye(size: number) {
-  return new Eye(size);
-}
+import Matrix from './Matrix';
 
 class Eye extends Matrix {
   /**
@@ -21,10 +17,10 @@ class Eye extends Matrix {
   constructor(size: number) {
     const result = new Array(size * size);
 
-    for (let i = 0; i < size; i++) {
-      for (let j = 0; j < size; j++) {
+    for (let i = 0; i < size; i += 1) {
+      for (let j = 0; j < size; j += 1) {
         const currentIndex = i * size + j;
-        if (j == i) {
+        if (j === i) {
           result[currentIndex] = 1;
         } else result[currentIndex] = 0;
       }
@@ -34,6 +30,8 @@ class Eye extends Matrix {
   }
 }
 
-export { eye };
+function eye(size: number): Eye {
+  return new Eye(size);
+}
 
-export default Eye;
+export default eye;
