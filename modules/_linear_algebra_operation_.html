@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>&quot;aerospace/vandenkerckhove&quot; | numflow-functions</title>
+	<title>&quot;linear-algebra/operation&quot; | numflow-functions</title>
 	<meta name="description" content="Documentation for numflow-functions">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,10 +56,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="_aerospace_vandenkerckhove_.html">&quot;aerospace/vandenkerckhove&quot;</a>
+					<a href="_linear_algebra_operation_.html">&quot;linear-algebra/operation&quot;</a>
 				</li>
 			</ul>
-			<h1>Module &quot;aerospace/vandenkerckhove&quot;</h1>
+			<h1>Module &quot;linear-algebra/operation&quot;</h1>
 		</div>
 	</div>
 </header>
@@ -70,44 +70,59 @@
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
+						<section class="tsd-index-section tsd-is-not-exported">
+							<h3>Type aliases</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported"><a href="_linear_algebra_operation_.html#allowedoperations" class="tsd-kind-icon">Allowed<wbr>Operations</a></li>
+							</ul>
+						</section>
 						<section class="tsd-index-section ">
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_aerospace_vandenkerckhove_.html#vandenkerckhove" class="tsd-kind-icon">vandenkerckhove</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_linear_algebra_operation_.html#operation" class="tsd-kind-icon">operation</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
+			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
+				<h2>Type aliases</h2>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
+					<a name="allowedoperations" class="tsd-anchor"></a>
+					<h3>Allowed<wbr>Operations</h3>
+					<div class="tsd-signature tsd-kind-icon">Allowed<wbr>Operations<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"sqrt"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"abs"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"exp"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"sin"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"cos"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"tan"</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/flw0/numflow-functions/blob/2a42bd2/src/linear-algebra/operation.ts#L3">linear-algebra/operation.ts:3</a></li>
+						</ul>
+					</aside>
+				</section>
+			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Functions</h2>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
-					<a name="vandenkerckhove" class="tsd-anchor"></a>
-					<h3>vandenkerckhove</h3>
+					<a name="operation" class="tsd-anchor"></a>
+					<h3>operation</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
-						<li class="tsd-signature tsd-kind-icon">vandenkerckhove<span class="tsd-signature-symbol">(</span>y<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+						<li class="tsd-signature tsd-kind-icon">operation<span class="tsd-signature-symbol">(</span>a<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><a href="../classes/_linear_algebra_matrix_.matrix.html" class="tsd-signature-type">Matrix</a>, op<span class="tsd-signature-symbol">: </span><a href="_linear_algebra_operation_.html#allowedoperations" class="tsd-signature-type">AllowedOperations</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/_linear_algebra_matrix_.matrix.html" class="tsd-signature-type">Matrix</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/flw0/numflow-functions/blob/2a42bd2/src/aerospace/vandenkerckhove.ts#L5">aerospace/vandenkerckhove.ts:5</a></li>
+									<li>Defined in <a href="https://github.com/flw0/numflow-functions/blob/2a42bd2/src/linear-algebra/operation.ts#L5">linear-algebra/operation.ts:5</a></li>
 								</ul>
 							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>From: <a href="https://link.springer.com/chapter/10.1007/978-3-319-74373-8_4">https://link.springer.com/chapter/10.1007/978-3-319-74373-8_4</a></p>
-								</div>
-							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> y: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 1.4</span></h5>
-									<div class="tsd-comment tsd-typography">
-									</div>
+									<h5>a: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><a href="../classes/_linear_algebra_matrix_.matrix.html" class="tsd-signature-type">Matrix</a></h5>
+								</li>
+								<li>
+									<h5>op: <a href="_linear_algebra_operation_.html#allowedoperations" class="tsd-signature-type">AllowedOperations</a></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/_linear_algebra_matrix_.matrix.html" class="tsd-signature-type">Matrix</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -120,14 +135,17 @@
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
 					<li class="current tsd-kind-module">
-						<a href="_aerospace_vandenkerckhove_.html">&quot;aerospace/vandenkerckhove&quot;</a>
+						<a href="_linear_algebra_operation_.html">&quot;linear-<wbr>algebra/operation&quot;</a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module tsd-is-not-exported">
+						<a href="_linear_algebra_operation_.html#allowedoperations" class="tsd-kind-icon">Allowed<wbr>Operations</a>
+					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module">
-						<a href="_aerospace_vandenkerckhove_.html#vandenkerckhove" class="tsd-kind-icon">vandenkerckhove</a>
+						<a href="_linear_algebra_operation_.html#operation" class="tsd-kind-icon">operation</a>
 					</li>
 				</ul>
 			</nav>
