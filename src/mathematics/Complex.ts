@@ -6,8 +6,14 @@ class Complex {
 
   readonly im: number;
 
+  // @todo: maybe remove this property?
   readonly phase: number;
 
+  /**
+   * Create a new imaginary number
+   * @param real The real part of the complex number to be created
+   * @param imaginary The imaginary part of the complex number to be created
+   */
   constructor(real: number, imaginary: number) {
     this.re = real;
     this.im = imaginary;
@@ -63,8 +69,8 @@ class Complex {
       return new Complex(newRe, newIm);
     }
 
-    const newRe = this.re * a.re - a.im * a.im;
-    const newIm = this.re * a.im + a.im * a.re;
+    const newRe = this.re * a.re - this.im * a.im;
+    const newIm = this.re * a.im + this.im * a.re;
 
     return new Complex(newRe, newIm);
   }
@@ -81,11 +87,31 @@ class Complex {
       return new Complex(newRe, newIm);
     }
 
-    const scale = this.re * this.re + this.im * this.im;
+    // @todo use hypot
+    const scale = a.re ** 2 + a.im ** 2;
 
-    const reciprocal = new Complex(this.re / scale, -this.im / scale);
+    const reciprocal = new Complex(a.re / scale, -a.im / scale);
 
     return this['*'](reciprocal);
+  }
+
+  /**
+   *
+   * @param a
+   *
+   * @todo use abs() function for complex magnitude calculation
+   */
+  '^'(a: number): Complex {
+    const magnitude = this.re ** 2 + this.im ** 2;
+
+    const powerMagnitude = magnitude ** a;
+
+    const powerPhase = this.phase * a;
+
+    return new Complex(
+      powerMagnitude * Math.cos(powerPhase),
+      powerMagnitude * Math.sin(powerPhase)
+    );
   }
 
   public toString(): string {

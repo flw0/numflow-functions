@@ -1,6 +1,6 @@
-import factorial from "./factorial";
+import factorial from './factorial';
 
-function npr(n: number, r: number) {
+function npr(n: number, r: number): number {
   return factorial(n) / factorial(n - r);
 }
 
