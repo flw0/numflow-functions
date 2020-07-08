@@ -1,6 +1,6 @@
-import Fill from "../Fill";
+import Fill from '../Fill';
 
-test("Check if Fill matrix is constructed correctly", () => {
+test('Check if Fill matrix is constructed correctly', () => {
   const a = new Fill(3, 2);
 
   expect(a.width).toBe(3);
