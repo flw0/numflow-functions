@@ -144,5 +144,5 @@ test('Test the performance of matrix multiplication', () => {
 
   const averageTime = totalTime / amountOfRuns;
 
-  expect(averageTime).toBeLessThan(300);
+  expect(averageTime).toBeLessThan(340);
 });
