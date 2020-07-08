@@ -127,9 +127,9 @@ test('Test the performance of matrix multiplication', () => {
   const b = rand(size, size);
 
   let totalTime = 0;
-  const amountOfRuns = 5;
+  const amountOfRuns = 10;
 
-  for (let i = 0; i < 5; i += 1) {
+  for (let i = 0; i < amountOfRuns; i += 1) {
     const startTime = new Date().getTime();
 
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
@@ -144,32 +144,5 @@ test('Test the performance of matrix multiplication', () => {
 
   const averageTime = totalTime / amountOfRuns;
 
-  expect(averageTime).toBeLessThan(750);
-});
-
-test('Test the performance of matrix addition', () => {
-  const size = 4096;
-
-  const a = rand(size, size);
-  const b = rand(size, size);
-
-  let totalTime = 0;
-  const amountOfRuns = 5;
-
-  for (let i = 0; i < 5; i += 1) {
-    const startTime = new Date().getTime();
-
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    const c = a['+'](b);
-
-    const endTime = new Date().getTime();
-
-    totalTime += endTime - startTime;
-  }
-
-  const averageTime = totalTime / amountOfRuns;
-
-  expect(averageTime).toBeLessThan(350);
+  expect(averageTime).toBeLessThan(300);
 });

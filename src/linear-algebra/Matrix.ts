@@ -227,39 +227,40 @@ class Matrix {
   }
 
   private static basicMultiplication(a: Matrix, b: Matrix): Matrix {
-    const kTimesBWidth = new Array(b.height);
-
-    for (let k = 0; k < b.height; k += 1) {
-      kTimesBWidth[k] = k * b.width;
-    }
-
-    const jTimesAWidth = new Array(b.height);
-
-    for (let j = 0; j < a.width; j += 1) {
-      jTimesAWidth[j] = j * a.width;
-    }
-
     const aValues = a.getValues();
     const bValues = b.getValues();
 
     const bHeight = b.height;
     const bWidth = b.width;
     const aHeight = a.height;
+    const aWidth = a.width;
 
     const result: number[] = new Array(a.height * b.width);
 
-    for (let i = 0; i < b.width; i += 1) {
-      for (let j = 0; j < aHeight; j += 1) {
+    let counter = 0;
+
+    for (let j = 0; j < aHeight; j += 1) {
+      let innerCounter = 0;
+
+      for (let i = 0; i < bWidth; i += 1) {
         let total = 0;
 
-        const locationInA = jTimesAWidth[j];
+        let kCounter = i;
 
-        for (let k = 0; k < bHeight; k += 1) {
-          total += aValues[locationInA + k] * bValues[kTimesBWidth[k] + i];
+        const maxForLoop = innerCounter + bHeight;
+
+        for (let k = innerCounter; k < maxForLoop; k += 1) {
+          total += aValues[k] * bValues[kCounter];
+
+          kCounter += bWidth;
         }
 
-        result[j * bWidth + i] = total;
+        result[counter] = total;
+
+        counter += 1;
       }
+
+      innerCounter += aWidth;
     }
 
     return new Matrix(result, b.width, a.height);
