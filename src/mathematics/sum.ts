@@ -1,13 +1,11 @@
-import { Matrix } from "../linear-algebra/";
+import Matrix from '../linear-algebra/Matrix';
 
-function sum(a: number[] | Matrix): number {
-  if (Array.isArray(a) === true)
-    return (a as number[]).reduce((a, b) => a + b, 0);
-  else {
-    const matrixValues = (a as Matrix).getValues();
+function sum(a: number | Matrix): number {
+  if (typeof a === 'number') return a;
 
-    return sum(matrixValues);
-  }
+  const matrixValues = a.getValues();
+
+  return matrixValues.reduce((b, c) => b + c, 0);
 }
 
 export default sum;
